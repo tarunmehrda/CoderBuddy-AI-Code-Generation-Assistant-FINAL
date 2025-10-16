@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <h1 class="title">Quiz Master</h1>
+                <p class="subtitle">Test your knowledge with our fun quiz!</p>
+                <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <div class="quiz-info">
+                    <span id="question-number">Question 1 of 10</span>
+                    <span id="timer">30s</span>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <h2 id="question-text" class="question">Question will appear here</h2>
+                <div id="options-container" class="options">
+                    <!-- Options will be inserted here -->
+                </div>
+            </div>
+
+            <button id="next-btn" class="btn btn-secondary" disabled>Next Question</button>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-content">
+                <div class="score-circle">
+                    <svg class="score-svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="90" class="score-bg"></circle>
+                        <circle id="score-progress" cx="100" cy="100" r="90" class="score-fill"></circle>
+                    </svg>
+                    <div class="score-text">
+                        <span id="score-percentage">0%</span>
+                        <span class="score-label">Score</span>
+                    </div>
+                </div>
+                <h2 id="result-message" class="result-title">Great Job!</h2>
+                <p id="result-details" class="result-details">You got 8 out of 10 questions correct</p>
+                <div class="result-actions">
+                    <button id="retry-btn" class="btn btn-primary">Try Again</button>
+                    <button id="review-btn" class="btn btn-outline">Review Answers</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Screen -->
+        <div id="review-screen" class="screen">
+            <div class="review-header">
+                <h2>Answer Review</h2>
+                <button id="back-to-results" class="btn btn-text">← Back to Results</button>
+            </div>
+            <div id="review-container" class="review-container">
+                <!-- Review items will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
